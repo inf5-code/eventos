@@ -40,8 +40,9 @@ export function FilterTabs() {
           aria-selected={current === id}
           onClick={() => handleSelect(id)}
           className={cn(
-            "flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium",
+            "flex items-center gap-1.5 px-3 py-2 rounded-full text-sm font-medium",
             "whitespace-nowrap transition-all duration-200 cursor-pointer border",
+            "min-h-[44px]",
             current === id
               ? "bg-brand-300/15 text-brand-300 border-brand-300/40"
               : "bg-transparent text-slate-400 border-border hover:text-white hover:border-border-strong",

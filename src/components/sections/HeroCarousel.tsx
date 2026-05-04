@@ -52,8 +52,8 @@ export function HeroCarousel({ slides }: HeroCarouselProps) {
     <section
       aria-label="Eventos destacados"
       aria-roledescription="carrusel"
-      className="relative overflow-hidden rounded-xl bg-bg-card"
-      style={{ aspectRatio: "16/7", minHeight: 300 }}
+      className="relative overflow-hidden rounded-xl bg-bg-card w-full"
+      style={{ height: "clamp(260px, 52vw, 560px)" }}
     >
       {slides.map((s, i) => (
         <div
@@ -87,7 +87,7 @@ export function HeroCarousel({ slides }: HeroCarouselProps) {
       <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-bg-base/90 via-bg-base/30 to-transparent" />
 
       {/* Content */}
-      <div className="absolute bottom-0 left-0 p-4 sm:p-8 md:p-10 z-10 max-w-2xl">
+      <div className="absolute bottom-0 left-0 right-0 sm:right-auto p-4 sm:p-8 md:p-10 z-10 sm:max-w-2xl">
         <div className="flex gap-2 mb-3">
           <span className="border border-brand-300/60 text-brand-300 text-xs px-3 py-1 rounded-full">
             {slide.tag}
@@ -99,9 +99,9 @@ export function HeroCarousel({ slides }: HeroCarouselProps) {
 
         <h1
           key={slide.id}
-          className="font-display font-bold text-white leading-[1] mb-3 whitespace-pre-line
-                     animate-fade-up"
-          style={{ fontSize: "clamp(2rem, 5vw, 5rem)", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}
+          className="font-display font-bold text-white leading-[1.05] mb-3 whitespace-pre-line
+                     animate-fade-up break-words"
+          style={{ fontSize: "clamp(1.6rem, 4.5vw, 5rem)", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}
         >
           {slide.title}
         </h1>

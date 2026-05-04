@@ -47,7 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="es" className={`${poppins.variable} ${righteous.variable}`}>
       <body className="min-h-screen flex flex-col bg-bg-base text-slate-100 antialiased">
         <Navbar />
-        <main id="main-content" className="flex-1 pt-[57px]" tabIndex={-1}>
+        <main id="main-content" className="flex-1 pt-[57px] w-full overflow-x-hidden" tabIndex={-1}>
           {children}
         </main>
         <Footer />

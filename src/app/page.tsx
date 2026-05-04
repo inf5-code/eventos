@@ -16,7 +16,7 @@ export default function HomePage() {
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────── */}
-      <section className="px-4 pt-4 pb-0">
+      <section className="px-4 pt-4 pb-0 overflow-x-hidden">
         <HeroCarousel slides={HERO_SLIDES} />
       </section>
 

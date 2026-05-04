@@ -44,7 +44,7 @@ export default async function EventDetailPage({ params }: PageProps) {
 
   return (
     <>
-      <div className="max-w-5xl mx-auto px-4 py-6">
+      <div className="max-w-5xl mx-auto px-4 py-6 pb-28 lg:pb-6">
         {/* Back */}
         <Link
           href="/eventos"
@@ -198,6 +198,25 @@ export default async function EventDetailPage({ params }: PageProps) {
               ))}
             </div>
           </aside>
+        </div>
+      </div>
+
+      {/* Mobile sticky buy bar */}
+      <div className="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-bg-base/95 backdrop-blur-md border-t border-border px-4 py-3">
+        <div className="max-w-lg mx-auto flex items-center gap-3">
+          <div className="flex-1 min-w-0">
+            <p className="text-xs text-slate-500 leading-none mb-0.5">Precio desde</p>
+            <p className="text-cta-200 font-bold text-lg leading-none">{event.priceLabel}</p>
+          </div>
+          <Button
+            variant={event.soldOut ? "ghost" : "cta"}
+            size="md"
+            disabled={event.soldOut}
+            className="flex-none px-6"
+          >
+            <Ticket className="w-4 h-4" aria-hidden />
+            {event.soldOut ? "Agotado" : "Comprar entradas"}
+          </Button>
         </div>
       </div>
 

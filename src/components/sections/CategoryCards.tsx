@@ -25,7 +25,7 @@ export function CategoryCards({ categories }: CategoryCardsProps) {
             key={cat.id}
             href={`/eventos?cat=${cat.id}`}
             role="listitem"
-            className="relative flex-none w-44 md:w-52 h-[340px] rounded-xl overflow-hidden
+            className="relative flex-none w-32 sm:w-44 md:w-52 h-[180px] sm:h-[260px] md:h-[340px] rounded-xl overflow-hidden
                        ring-1 ring-border hover:ring-brand-300/50 transition-all duration-200
                        focus-visible:ring-2 focus-visible:ring-brand-300"
             aria-label={`Ver eventos de ${cat.label}`}

@@ -75,7 +75,7 @@ export function EventCard({ event, animationDelay = 0 }: EventCardProps) {
 
         {/* Info */}
         <div className="flex flex-col flex-grow py-3 border-b border-border md:border-0">
-          <h3 className="text-white font-bold text-xl leading-[120%] mb-1.5 line-clamp-2
+          <h3 className="text-white font-bold text-base sm:text-xl leading-[120%] mb-1.5 line-clamp-2
                          group-hover:text-brand-300 transition-colors">
             {event.title}
           </h3>
